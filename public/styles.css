@@ -1,0 +1,49 @@
+/*body {
+    background-image: url("imagenes/cosa.jpg");
+    background-position: left;
+    background-repeat: repeat-y;
+}
+textarea {
+	resize: vertical;
+}
+
+#main-jumbo {
+	background-color: rgb(255, 255, 51);
+	padding-left: 11%;
+
+	border-radius: 50px 150px;
+
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #b1ff2a;
+
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+	border-bottom-color: #ffffd5;
+
+    border-top-style: solid;
+    border-top-width: 2px;
+	border-top-color: #ffff2c;
+}*/
+
+body {
+    background-color: rgb(2, 10, 2);
+}
+
+.nav>li>a:hover {
+    text-decoration: none;
+    background-color: #4CAF50;
+}
+
+#titulo {
+    color: #ffff00;
+    font-family: 'Rock Salt', cursive;
+    text-align: center;
+    font-size: 130px;
+}
+
+#titulo small {
+    font-family: 'Indie Flower', cursive;
+    color: #ffff00;
+    text-align: left;
+}
