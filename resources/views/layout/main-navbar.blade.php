@@ -22,7 +22,7 @@
 	<body>
         <ul class="nav nav-pills">
             <li role="presentation"><a href="#">Principal</a></li>
-            <li role="presentation"><a href="#">Eventos</a></li>
+            <li role="presentation"><a href="eventos">Eventos</a></li>
             <li role="presentation"><a href="#">Contacto</a></li>
         </ul>           
 
