@@ -21,15 +21,13 @@
 
 	<body>
         <ul class="nav nav-pills">
-            <li role="presentation"><a href="#">Principal</a></li>
+            <li role="presentation"><a href="index">Principal</a></li>
             <li role="presentation"><a href="eventos">Eventos</a></li>
-            <li role="presentation"><a href="#">Contacto</a></li>
+            <li role="presentation"><a href="contactos">Contacto</a></li>
         </ul>           
 
-
-
-        @yield('contenido')
-
+            @yield('contenido')
+                    
 		<script src="estilosJquery.js"></script>
 	</body>
 

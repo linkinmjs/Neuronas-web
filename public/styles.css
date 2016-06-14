@@ -15,6 +15,13 @@ body {
 /*
     TITULO
 */
+
+#titulo2{
+    width: 80%;
+    padding-left: 20%;
+    
+}
+
 #titulo {
     padding-top: 100px;
     padding-bottom: 40px;
@@ -33,4 +40,14 @@ body {
 */
 #contenido {
     color:white;
+}
+
+/*
+    EVENTOS
+*/
+#formGroup{
+    color: white;
+}
+textarea { 
+    resize:none; 
 }

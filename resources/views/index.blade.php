@@ -1,8 +1,11 @@
 @extends('layout.main-navbar')
 
 @section('contenido')
-	<div>
+<!-- 	<div>
 		<h1 id='titulo'>NEURONAS<small id='subtitulo'> Reggae</small></h1>
+	</div> -->
+	<div>
+		<img id='titulo2' src="images/neurona_font.png">
 	</div>
 
 	<div class="container" id='contenido'>
@@ -22,3 +25,6 @@
 		</div>
 	</div>
 @endsection
+
+
+
