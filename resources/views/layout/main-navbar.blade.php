@@ -17,7 +17,10 @@
 
         <!-- styles -->
         <link rel="stylesheet" href="{{ URL::asset('styles.css') }}">
-	</head>
+	
+        <!-- .ico -->
+        <link rel="shortcut icon" href="{{ asset('NeuronaICO.ico') }}">
+    </head>
 
 	<body>
         <ul class="nav nav-pills">

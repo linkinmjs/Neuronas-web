@@ -1,5 +1,10 @@
 body {
     background-color: rgb(2, 10, 2);
+    background-image: url("images/ciudad2.png");
+    background-repeat: no-repeat;
+    background-position:-10px 130%;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 /*
     NAVBAR
