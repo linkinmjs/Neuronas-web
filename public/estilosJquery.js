@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 	$(document).bind('keypress', function(event) {
 		if( event.which === 78 && event.shiftKey ) {
-			alert('Te intentas loguear SHIFT+N');
+			$( "#secreto" ).toggle();;
 		}
 	});
 

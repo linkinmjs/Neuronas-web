@@ -30,9 +30,9 @@ class EventoController extends Controller
     {
 
 
-//  Se debera generar el ingreso de sesion para poder
-//  guardar los errores y renderizarlos por pantalla
-//  los eventos se estan guardando correctamente exceptuando por la fecha
+        //  Se debera generar el ingreso de sesion para poder
+        //  guardar los errores y renderizarlos por pantalla
+        //  los eventos se estan guardando correctamente exceptuando por la fecha
 
         
         dd($request->all());
@@ -45,7 +45,7 @@ class EventoController extends Controller
         $data = $request->all();
         Evento::create($data);
 
-        return redirect()->to('/');
+        return redirect()->to('/index');
 
     }
 

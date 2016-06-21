@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Usuario;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -39,6 +40,11 @@ class AuthController extends Controller
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
+
+    public function loginUsername()
+    {
+        return property_exists($this, 'username') ? $this->username : 'nombre';
+    }    
 
     /**
      * Get a validator for an incoming registration request.

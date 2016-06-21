@@ -3,24 +3,12 @@
 Route::group(['middleware' => ['web']], function () {	
 
 	Route::get('/', function() {
-		return view('index');
+		return redirect()->to('/index');
 	});
-	Route::get('/index', function() {
-		return view('index');
-	});
-		Route::get('/contactos', function() {
+	Route::get('/contactos', function() {
 		return view('contactos');
 	});
 
+	Route::resource('/index', 'MainController');
 	Route::resource('/eventos', 'EventoController');
-
 });
-
-
-// Route::group(['middleware' => ['web']], function() {
-
-// 	Route::get('/', function () {
-//     	return view('index');
-// 	});
-// 	Route::resource('/eventos', 'EventoController@Index');
-// });

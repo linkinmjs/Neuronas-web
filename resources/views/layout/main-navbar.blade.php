@@ -22,12 +22,29 @@
         <link rel="shortcut icon" href="{{ asset('NeuronaICO.ico') }}">
     </head>
 
-	<body>
-        <ul class="nav nav-pills">
-            <li role="presentation"><a href="index">Principal</a></li>
-            <li role="presentation"><a href="eventos">Eventos</a></li>
-            <li role="presentation"><a href="contactos">Contacto</a></li>
-        </ul>           
+    <body>
+
+        <div class='navbar bg-faded'>
+            <div class="nav-pills">
+                <ul class="nav nav-pills">
+                    <li role="presentation"><a href="index">Principal</a></li>
+                    <li role="presentation"><a href="eventos">Eventos</a></li>
+                    <li role="presentation"><a href="contactos">Contacto</a></li>
+                </ul>
+            </div>
+
+            <form class="navbar-form navbar-right" role="search" id='secreto' style="display:none" method='POST'>
+                {!! csrf_field() !!}
+                <div class="form-group">
+                   <input type="text" class="form-control" name="usuario" placeholder="Usuario...">
+                </div>
+                <div class="form-group">
+                   <input type="text" class="form-control" name="contraseña" placeholder="Contraseña...">
+                </div>
+                <button type="submit" class="btn btn-default">Ingresar</button>
+            </form>
+
+        </div>
 
             @yield('contenido')
                     
