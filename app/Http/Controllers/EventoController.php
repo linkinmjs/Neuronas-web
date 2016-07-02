@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Evento;
 
+
 class EventoController extends Controller
 {
 
@@ -32,20 +33,20 @@ class EventoController extends Controller
 
         //  Se debera generar el ingreso de sesion para poder
         //  guardar los errores y renderizarlos por pantalla
-        //  los eventos se estan guardando correctamente exceptuando por la fecha
+        //  los eventos se estan guardando correctamente exceptuando por la fecha que difiere el formato
 
         
-        dd($request->all());
+        // dd($request->all());
         $this->validate($request, [
             'nombre' => 'required|max:250',
-            'descripcion' => 'required|max:400',
-            'fecha' => 'required',
+            // 'descripcion' => 'required|max:400',
+            // 'fecha' => 'required',
             ]);
 
         $data = $request->all();
         Evento::create($data);
-
-        return redirect()->to('/index');
+        return redirect::back()->withErrors();
+        // return redirect()->to('/index');
 
     }
 

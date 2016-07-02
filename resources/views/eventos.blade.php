@@ -4,6 +4,10 @@
 
 	@include('partial/errores')
 
+	@if($errors->any())
+		<h4>{{$errors->first()}}</h4>
+	@endif
+
 	<div class='row'>
 		<div class='col-md-4 col-md-offset-4'>
 
@@ -18,14 +22,14 @@
 
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1"><span class='glyphicon glyphicon-bullhorn'></span></span>
-					<input name="nombre" type="text" class="form-control" placeholder="Nombre..." aria-describedby="basic-addon1">
+					<input name="nombre" type="text" class="form-control" placeholder="Nombre..." aria-describedby="basic-addon1" value="{{old('nombre')}}">
 				</div>
 
 				<br>
 
 				<div class="input-group">
 					<span class="input-group-addon" id="basic-addon1"><span class='glyphicon glyphicon-align-left'></span></span>
-					<textarea name="descripcion" class="form-control" rows="10" placeholder="Descripcion..." aria-describedby="basic-addon1">{{ old('descripcion') }}</textarea>
+					<textarea name="descripcion" class="form-control" rows="10" placeholder="Descripcion..." aria-describedby="basic-addon1" value="{{old('descripcion')}}"></textarea>
 				</div>
 
 				<br>

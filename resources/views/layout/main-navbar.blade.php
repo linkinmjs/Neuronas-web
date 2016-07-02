@@ -24,6 +24,7 @@
 
     <body>
 
+        <div id='div1'>
         <div class='navbar bg-faded'>
             <div class="nav-pills">
                 <ul class="nav nav-pills">
@@ -45,8 +46,9 @@
             </form>
 
         </div>
+        </div>
 
-            @yield('contenido')
+        @yield('contenido')
                     
 		<script src="estilosJquery.js"></script>
 	</body>

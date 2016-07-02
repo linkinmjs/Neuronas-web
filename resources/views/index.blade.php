@@ -2,10 +2,13 @@
 
 @section('contenido')
 
+	<div id='div2'>
 	<div>
-		<img id='titulo2' src="images/neurona_font.png">
+		<img id='titulo' src="images/neurona_font.png">
+	</div>
 	</div>
 
+	<div id='div3'>
 	<div class="container" id='contenido'>
 		<div class="row">
 			<div class="col-md-8">
@@ -21,6 +24,7 @@
 				@endfor
 			</div>
 		</div>
+	</div>
 	</div>
 @endsection
 
