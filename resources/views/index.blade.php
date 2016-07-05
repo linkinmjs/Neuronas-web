@@ -12,10 +12,21 @@
 	<div class="container" id='contenido'>
 		<div class="row">
 			<div class="col-md-8">
-				@for ($i = 0; $i < 100; $i++)
+
+
+<!-- 				@for ($i = 0; $i < 100; $i++)
 				Hola soy un flyer {{ $i }}
 				<br>
-				@endfor
+				@endfor -->
+
+			@if (count($eventos) != 0)
+				@foreach ( $eventos as $evento )
+				<h1> {{ $evento->nombre }} </h1>
+				@endforeach
+			@else
+				<h1> Ningun evento traido de DB </h1>
+			@endif
+
 			</div>			
 			<div class="col-md-4">
 				@for ($i = 0; $i < 100; $i++)

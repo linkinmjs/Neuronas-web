@@ -31,6 +31,7 @@
                     <li role="presentation"><a href="index">Principal</a></li>
                     <li role="presentation"><a href="eventos">Eventos</a></li>
                     <li role="presentation"><a href="contactos">Contacto</a></li>
+                    <li role="presentation"><a href="canciones">Canciones</a></li>
                 </ul>
             </div>
 
