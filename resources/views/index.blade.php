@@ -4,7 +4,7 @@
 
 	<div id='div2'>
 	<div>
-		<img id='titulo' src="images/neurona_font.png">
+		<img id='titulo' src="{{ asset('images/Neurona_font.png') }}">
 	</div>
 	</div>
 

@@ -26,7 +26,8 @@ $(document).ready(function() {
 		}, 3500);
 	setTimeout(function(){
 			$('#div3').css('display', 'block');
-		}, 4500);			
+		}, 4500);
 
+	$('body > div:last').remove();
 });
 
