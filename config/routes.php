@@ -20,5 +20,6 @@ return [
         \App\Http\Routes\ContactoRoutes::class,
         \App\Http\Routes\CancionRoutes::class,
         \App\Http\Routes\EventoRoutes::class,
+        \App\Http\Routes\AuthRoutes::class,
     ]
 ];

@@ -1,13 +1,13 @@
 <?php
-
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User;
 
-class Usuario extends Model
+class Usuario extends User
 {
-    protected $table = 'usuarios';
-
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function eventos()
     {
     	return $this->belongsToMany('App\Evento','usuario_eventos','usuario_id','evento_id');
