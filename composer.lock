@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c284a9c122da36c99a8b6597bdce7aa6",
-    "content-hash": "8b1485987e7c5949da82435d403e52e8",
+    "hash": "e1e064f9988575e317e4358f94d2321f",
+    "content-hash": "bb0d1fc6ee7550fec14a4fcf2a1088e4",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -434,6 +434,42 @@
                 "laravel"
             ],
             "time": "2016-06-17 19:25:12"
+        },
+        {
+            "name": "laravelba/route-binder",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelBA/route-binder.git",
+                "reference": "cc93148629c78e445961df0b32e54db5dfceefc8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelBA/route-binder/zipball/cc93148629c78e445961df0b32e54db5dfceefc8",
+                "reference": "cc93148629c78e445961df0b32e54db5dfceefc8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.0",
+                "illuminate/support": "~5.0"
+            },
+            "require-dev": {
+                "illuminate/routing": "^5.1",
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LaravelBA\\RouteBinder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel route binding, done right.",
+            "time": "2015-09-15 12:48:46"
         },
         {
             "name": "league/flysystem",

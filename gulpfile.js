@@ -11,6 +11,30 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir(function(mix) {
+elixir(function (mix) {
     mix.sass('app.scss');
+    
+    mix.scripts([
+        './node_modules/jquery/dist/jquery.js',
+        './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
+    ], './public/js/vendor.js');
+
+    mix.scripts('./resources/assets/js/**/*.js', './public/js/app.js');
+
+    mix.copy('./resources/assets/images/**/*.{jpg,png,gif,svg}', './public/images');
+
+    // Assets del cassette
+    mix.styles([
+        './resources/assets/cassette/normalize.css',
+        './resources/assets/cassette/demo.css',
+        './resources/assets/cassette/knobKnob.css',
+        './resources/assets/cassette/style.css'
+    ], './public/cassette/cassette.css');
+    mix.scripts('./resources/assets/cassette/*.js', './public/cassette/cassette.js');
+    mix.copy('./resources/assets/cassette/fonts/*.{eot,woff,svg,ttf}', './public/cassette/fonts');
+
+    // Assets de JQuery-UI
+    mix.styles('./resources/assets/jquery-ui/jquery-ui.css', './public/jquery-ui/jquery-ui.css');
+    mix.styles('./resources/assets/jquery-ui/jquery-ui.js', './public/jquery-ui/jquery-ui.js');
+    mix.copy('./resources/assets/jquery-ui/images/*.{jpg,png,gif,svg}', './public/jquery-ui/images');
 });
