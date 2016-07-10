@@ -10,6 +10,7 @@ class EventoController extends Controller
     public function index()
     {
         return view('eventos');
+
     }
 
     public function create()
@@ -19,11 +20,15 @@ class EventoController extends Controller
 
     public function store(Request $request)
     {
-    
-        // dd($request->all());
+
+        $archivo = $request->file('archivo');
+        $archivo->move(storage_path() . '/uploads', 'as.jpg');
+
+        dd($request->all());
+        
         $data = $request->all();
         Evento::create($data);
-        return redirect()->to('/index');
+        return redirect()->to('/');
 
     }
 

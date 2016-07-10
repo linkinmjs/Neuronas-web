@@ -11,7 +11,7 @@
 	<div class='row'>
 		<div class='col-md-4 col-md-offset-4'>
 
-			<form id='formGroup' role="form" method='POST' action="{{ url('eventos') }}">
+			<form id='formGroup' role="form" method='POST' action="{{ url('eventos') }}" enctype='multipart/form-data'>
 				{!!  csrf_field() !!}
 
 				<div>
@@ -47,8 +47,8 @@
 				<br>
 
 				<div class="form-group">
-					<label for="exampleInputFile">Flyer</label>
-					<input type="file" id="exampleInputFile">
+					<label for="InputFile">Flyer</label>
+					<input name='archivo' type="file" id="InputFile">
 					<p class="help-block">Ingrese el archivo formato JPG del evento</p>
 				</div>				
 				

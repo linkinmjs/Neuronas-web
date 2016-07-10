@@ -9,6 +9,7 @@ use LaravelBA\RouteBinder\RouteBinder;
 class AuthRoutes implements RouteBinder
 {
     const LOGIN = 'auth.login';
+    const LOGOUT = 'auth.logout';
 
     public function addBindings(Router $router)
     {
@@ -21,6 +22,10 @@ class AuthRoutes implements RouteBinder
             $router->post('/login', [
                 'as'   => self::LOGIN,
                 'uses' => AuthController::class . '@login',
+            ]);
+            $router->get('/logout', [
+                'as'   => self::LOGOUT,
+                'uses' => AuthController::class . '@logout',
             ]);
         });
     }

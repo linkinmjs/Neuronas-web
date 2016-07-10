@@ -19,6 +19,10 @@ elixir(function (mix) {
         './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js'
     ], './public/js/vendor.js');
 
+    mix.copy(
+        './node_modules/bootstrap-sass/assets/fonts/bootstrap/*.{eot,svg,ttf,woff,woff2}',
+        './public/fonts/bootstrap');
+
     mix.scripts('./resources/assets/js/**/*.js', './public/js/app.js');
 
     mix.copy('./resources/assets/images/**/*.{jpg,png,gif,svg}', './public/images');

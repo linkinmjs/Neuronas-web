@@ -1,6 +1,6 @@
 @inject('guard', '\Illuminate\Contracts\Auth\Guard')
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -16,24 +16,24 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                @if ($guard->check())
-                <li><a href="{{ route(\App\Http\Routes\EventoRoutes::INDEX) }}">Eventos</a></li>
-                @endif
                 <li><a href="{{ route(\App\Http\Routes\CancionRoutes::INDEX) }}">Canciones</a></li>
-                <li><a href="{{ route(\App\Http\Routes\ContactoRoutes::INDEX) }}">Contactos</a></li>
+                <li><a href="{{ url('/') }}">Eventos</a></li>
+                {{--<li><a href="{{ route(\App\Http\Routes\EventoRoutes::INDEX) }}">Eventos</a></li>--}}
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Link</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li>
+                <li><a href="#">Contactos</a></li>
+
+                @if ($guard->check())
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrador<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ route (\APP\Http\Routes\EventoRoutes::INDEX) }}">ABM Eventos</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{{ route (\APP\Http\Routes\AuthRoutes::LOGOUT) }}">Desloguear</a></li>
+                        </ul>
+                    </li>
+                @endif
+
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

@@ -5,7 +5,7 @@
 		<title>Neuronas Reggae</title>
 
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
-
+        <link rel="stylesheet" href="{{ asset('jquery-ui/jquery-ui.css') }}"/>
         <link rel="stylesheet" href="{{ asset('cassette/cassette.css') }}"/>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}"/>
     </head>
