@@ -1,0 +1,58 @@
+body {
+  background: {
+    color: rgb(2, 10, 2);
+    repeat: no-repeat;
+    position: -10px 130%;
+    size: 100%;
+    attachment: fixed;
+  }
+}
+
+// NAVBAR
+.nav>li>a {
+  color: #4CAF50;
+}
+
+.nav>li>a:hover {
+  color: rgb(2, 10, 2);
+  text-decoration: none;
+  background-color: #4CAF50;
+}
+
+// TITULO
+#titulo{
+  width: 80%;
+  padding-left: 20%;
+}
+
+#titulo small {
+  font-family: 'Indie Flower', cursive;
+  color: #ffff00;
+  text-align: left;
+}
+
+// CONTENIDO
+#contenido {
+  color:white;
+}
+
+// EVENTOS
+#formGroup{
+  color: white;
+}
+
+textarea { 
+  resize:none;
+}
+
+#div1{
+  display: none;
+}
+
+#div2{
+  display: none;
+}
+
+#div3{
+  display: none;
+}
