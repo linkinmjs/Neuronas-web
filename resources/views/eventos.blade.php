@@ -48,7 +48,7 @@
 
 				<div class="form-group">
 					<label for="InputFile">Flyer</label>
-					<input name='archivo' type="file" id="InputFile">
+					<input name='archivo' type="file" id="InputFile" required>
 					<p class="help-block">Ingrese el archivo formato JPG del evento</p>
 				</div>				
 				

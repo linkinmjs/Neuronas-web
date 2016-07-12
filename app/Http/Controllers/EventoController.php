@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Evento;
+use Illuminate\Support\Facades\DB;
 
 class EventoController extends Controller
 {
@@ -20,16 +21,21 @@ class EventoController extends Controller
 
     public function store(Request $request)
     {
+        //dd($request->all());
+
+        
 
         $archivo = $request->file('archivo');
-        $archivo->move(storage_path() . '/uploads', 'as.jpg');
-
-        dd($request->all());
-        
         $data = $request->all();
-        Evento::create($data);
-        return redirect()->to('/');
 
+        Evento::create($data);
+        $nombreArchivo = DB::table('eventos')->orderBy('id','desc')->value('id');
+        $nombreArchivo = "{$nombreArchivo}.jpg";
+
+        $archivo->move(storage_path() . '/uploads', $nombreArchivo);
+
+        dd($nombreArchivo);
+        return redirect()->to('/');
     }
 
     public function show($id)
