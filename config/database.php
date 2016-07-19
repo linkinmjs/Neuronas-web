@@ -56,7 +56,7 @@ return [
             'driver'    => 'mysql',
             'host'      => '127.0.0.1', //'sql212.260mb.net',
             'port'      => '3306',
-            'database'  => 'neuronas', //'n260m_18256571_neuronas',
+            'database'  => 'n260m_18256571_neuronas',
             'username'  => 'root', //'n260m_18256571',
             'password'  => '', //'Kraminal1',
             'charset'   => 'utf8',

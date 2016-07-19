@@ -25,26 +25,23 @@ class EventoController extends Controller
         //dd($request->all());
         //echo Carbon::now();
 
-
-
         $data = $request->all();
 
         $fechaCarbon = $request->input('fecha');
         $horasCarbon = $request->input('hora');
+        if(strlen($horasCarbon)== 7){
+            $horasCarbon = '0'.$horasCarbon;
+        }
 
         $diaCarbon = substr ($fechaCarbon,3,2);
         $mesCarbon = substr ($fechaCarbon,0,2);
         $añoCarbon = substr ($fechaCarbon,6,4);
 
-        if(strlen($horasCarbon)== 7){
-            $horasCarbon = '0'.$horasCarbon;
-        }
         $horaCarbon = substr ($horasCarbon,0,2);
         $dateCarbon = Carbon::create($añoCarbon,$mesCarbon,$diaCarbon,$horaCarbon,'00','00');
 
         //HASTA ACA TODO OK
-//        dd($dateCarbon);
-
+        //dd($dateCarbon);
 
         $archivo = $request->file('archivo');
         $nombreArchivo = DB::table('eventos')->orderBy('id','desc')->value('id');
@@ -52,9 +49,13 @@ class EventoController extends Controller
         $archivo->move(storage_path() . '/uploads', $nombreArchivo);
         $data['fecha'] = $dateCarbon;
 
+        //COMO TROMPADA -
+
         Evento::create($data);
 
         //dd($request->all());
+
+        
         return redirect()->to('/');
     }
 
