@@ -23,10 +23,17 @@ class EventoRoutes implements RouteBinder
      */
     public function addRoutes(Registrar $router)
     {
-        $router->group(['middleware' => ['web'], 'prefix' => '/eventos'], function (Registrar $router) {
+        $router->group(['middleware' => ['web','auth'], 'prefix' => '/eventos'], function (Registrar $router) {
             $router->get('/', [
+
                 'as'   => self::INDEX,
                 'uses' => EventoController::class . '@index',
+            ]);
+
+            $router->post('/', [
+
+                'as'   => self::INDEX,
+                'uses' => EventoController::class . '@store',
             ]);
         });
     }

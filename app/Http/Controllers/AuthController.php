@@ -20,7 +20,15 @@ class AuthController extends Controller
         ])) {
             return redirect()->intended();
         }
-
         return back();
+    }
+
+    /**
+     * @param Guard $guard
+     * @return RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function logout (Guard $guard){
+        $guard->logout();
+        return redirect('/');
     }
 }
