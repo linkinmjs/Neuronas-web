@@ -1,0 +1,26 @@
+.related-events {
+  &__link {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.related-event {
+  border: 1px solid #DDDDDD;
+  border-radius: 2px;
+  padding: 5px;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    margin-top: 6px;
+    font-size: 16px;
+  }
+
+  &__image {
+    @extend .img-responsive;
+  }
+}
