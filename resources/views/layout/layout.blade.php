@@ -11,7 +11,9 @@
     </head>
 
     <body>
-        <div class="container">
+        @include("components.navbar")
+
+        <div id="body" class="container">
             @yield("body")
         </div>
 

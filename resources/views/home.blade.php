@@ -1,6 +1,9 @@
 @extends("layout.layout")
 
 @section("body")
+
+    <img id="head-tittle" src="{{asset('images/neurona_font.png')}}">
+
     <div class="row">
         <div class="col-xs-9">
             <div class="row">
