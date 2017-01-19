@@ -1,0 +1,19 @@
+.event {
+  border: 1px solid #DDDDDD;
+  border-radius: 2px;
+  padding: 5px;
+
+  &__meta {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__address {
+    flex: 1;
+    text-align: right;
+  }
+
+  &__image {
+    @extend .img-responsive;
+  }
+}
